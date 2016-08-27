@@ -14,7 +14,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* gets rid of chrome's blue outlines */
-textarea, input { outline: none; }
+textarea, input, button { outline: none; }
 
 /*===== END reset =====*/
 
@@ -56,8 +56,19 @@ body{
 }
 
 .header h1{
-    color:#3399cc;
     font-size:3em;
+}
+
+.header h1 a{
+    text-decoration:none;
+    color:#3399cc;
+    opacity:0.85;
+    transition:all 0.15s ease;
+}
+
+.header h1 a:hover{
+    opacity:1;
+    cursor:pointer;
 }
 
 /* bottom gradient border */
@@ -80,9 +91,10 @@ body{
 }
 
 .header p{
-    font-family:Dolce Vita;
+    font-family:Adam;
     padding-top:1.5em;
     font-weight:bold;
+    font-size:1.15em;
 }
 
 .header p span{
@@ -95,18 +107,16 @@ body{
 
 .translate-tool{
     display: flex;
-    flex: 1 1 auto;
-    /* find a better way to fix widths */
-    min-width:80em;
 }
 
 .translate-tool__component {
     border: 1px solid #333;
-    flex: 1 1 auto;
+    flex: 1 1 0;
     margin: 0 1em;
     padding: 1.5em;
     font-family:telegrafico;
     font-weight:bold;
+    min-width:550;
 }
 
 .translate-tool__component textarea::selection{
@@ -133,14 +143,37 @@ body{
 }
 
 .output-header input{
-    width:60%;
+    width:70%;
     border:2px solid #3399cc;
     border-radius:10px;
     padding:0.5em 0.7em;
-    font-family:Calibri;
     font-weight:bold;
     font-size:0.9em;
     color:#9bc4d9;
+    font-family:Calibri;
+}
+
+.output-header button{
+    width:20%;
+    padding:6;
+    margin-left:30;
+    background-color:#9bc4d9;
+    border:3px solid #3399cc;
+    border-radius:4px;
+    font-family:Calibri;
+    font-size:1.1em;
+    color:white;
+    font-weight:bold;
+    opacity:0.8;
+    transition: all 0.15s ease;
+}
+
+.output-header button:hover{
+    opacity:1;
+}
+
+.output-header button:active{
+    border-style:ridge;
 }
 
 /*===== END translate-tool section =====*/

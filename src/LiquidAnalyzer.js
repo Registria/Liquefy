@@ -47,10 +47,9 @@ let LiquidAnalyzer = React.createClass({
     },
 
     updateSearchTerm(event) {
-        var searchTerm = event.target.value;
+        var searchTerm = this.refs.searchTerm.value;
 
         this.setState({searchTerm: searchTerm});
-        processInput();
     },
 
     _createOutput() {
@@ -84,7 +83,7 @@ let LiquidAnalyzer = React.createClass({
                 <div className="translate-tool__component">
                     <div className="tool-output">
                         <div className="output-header">
-                            <input type="text" placeholder="🔍 Search for a term" onChange={this.updateSearchTerm}></input>
+                            <input type="text" placeholder="🔍 Search for a term" ref="searchTerm"></input><button onClick={this.updateSearchTerm}>Search</button>
                         </div>
                         <div className="output-box">
                             { this._createOutput() }
