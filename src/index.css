@@ -121,6 +121,7 @@ body{
     padding: 1.5em;
     font-family:telegrafico;
     font-weight:bold;
+    min-width:300;
 }
 
 .translate-tool__component textarea{
