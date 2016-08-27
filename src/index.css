@@ -42,10 +42,15 @@ textarea, input, button { outline: none; }
 
 /*===== END fonts =====*/
 
+*{
+    width:100%;
+}
+
 body{
     display: flex;
     flex-direction: column;
     padding:0em 2em;
+    width:90%;
 }
 
 /*===== START main header =====*/
@@ -112,11 +117,14 @@ body{
 .translate-tool__component {
     border: 1px solid #333;
     flex: 1 1 0;
-    margin: 0 1em;
+    margin-left:2em;
     padding: 1.5em;
     font-family:telegrafico;
     font-weight:bold;
-    min-width:550;
+}
+
+.translate-tool__component textarea{
+    resize:vertical;
 }
 
 .translate-tool__component textarea::selection{
