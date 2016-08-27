@@ -83,7 +83,7 @@ let LiquidAnalyzer = React.createClass({
                 <div className="translate-tool__component">
                     <div className="tool-output">
                         <div className="output-header">
-                            <input type="text" placeholder="🔍 Search for a term" ref="searchTerm"></input><button onClick={this.updateSearchTerm}>Search</button>
+                            <input type="text" placeholder="🔍 Search for a filter term" ref="searchTerm"></input><button onClick={this.updateSearchTerm}>Search</button>
                         </div>
                         <div className="output-box">
                             { this._createOutput() }
