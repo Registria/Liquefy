@@ -125,6 +125,18 @@ body{
     font-family:'Roboto', sans-serif;
 }
 
+.filter::before{
+    content:"•";
+    color: #3399cc;
+}
+
+.translate-tool__component .filter::selection{
+    /* highlighting of filter term in output is yellow */
+    background:yellow;
+}
+
+/*===== START output header styles ====*/
+
 .output-header {
     border-bottom: 1px solid #333;
     padding-bottom:1em;
@@ -163,6 +175,8 @@ body{
 .output-header button:active{
     border-style:ridge;
 }
+
+/*===== END output header styles ====*/
 
 /*===== END translate-tool section =====*/
 

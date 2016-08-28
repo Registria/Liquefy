@@ -58,14 +58,14 @@ let LiquidAnalyzer = React.createClass({
                 if (item.filter === this.state.searchTerm) {
                     return (
                         <p key={ index }>
-                            { item.lineNumber }, { item.columnNumber}: { item.text }, filter: { item.filter }
+                            { item.lineNumber }, { item.columnNumber}: { item.text } <span className="filter"> filter: { item.filter } </span>
                         </p>
                     );
                 }
             } else {
                 return (
                   <p key={ index }>
-                    { item.lineNumber }, { item.columnNumber}: { item.text }, filter: { item.filter }
+                    { item.lineNumber }, { item.columnNumber}: { item.text } <span className="filter"> filter: { item.filter } </span>
                   </p>
                 );
             }
@@ -83,7 +83,7 @@ let LiquidAnalyzer = React.createClass({
                 <div className="translate-tool__component">
                     <div className="tool-output">
                         <div className="output-header">
-                            <input type="text" placeholder="🔍 Search for a filter term" ref="searchTerm"></input><button onClick={this.updateSearchTerm}>Search</button>
+                            <input type="text" placeholder="🔍 Search for a filter term" ref="searchTerm"></input><button  onClick={this.updateSearchTerm}>Search</button>
                         </div>
                         <div className="output-box">
                             { this._createOutput() }
