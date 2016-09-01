@@ -76,7 +76,7 @@ let LiquidAnalyzer = React.createClass({
         return (
             <section className="translate-tool">
                 <div className="translate-tool__component">
-                    <p>Your code:</p><br/>
+                    <p>Copy and paste your code:</p><br/>
                     <textarea className="tool-input" rows="29" type="text" onChange={this.processInput}></textarea>
                 </div>
 
@@ -84,6 +84,9 @@ let LiquidAnalyzer = React.createClass({
                     <div className="tool-output">
                         <div className="output-header">
                             <input type="text" placeholder="🔍 Search for a filter term" ref="searchTerm"></input><button  onClick={this.updateSearchTerm}>Search</button>
+                            <p class="output-description">
+                                Your code&#39;s Liquid components:
+                            </p>
                         </div>
                         <div className="output-box">
                             { this._createOutput() }

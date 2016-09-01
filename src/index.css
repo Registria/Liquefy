@@ -121,7 +121,8 @@ body{
 }
 
 .output-box{
-    padding:2em;
+    padding:0.5em;
+    font-weight:normal;
     font-family:'Roboto', sans-serif;
 }
 
@@ -147,6 +148,7 @@ body{
     border:2px solid #3399cc;
     border-radius:10px;
     padding:0.5em 0.7em;
+    margin-bottom:1.1em;
     font-weight:bold;
     font-size:1em;
     color:#9bc4d9;
@@ -174,6 +176,11 @@ body{
 
 .output-header button:active{
     border-style:ridge;
+}
+
+.output-description{
+    font-family: 'Questrial', sans-serif;
+
 }
 
 /*===== END output header styles ====*/
